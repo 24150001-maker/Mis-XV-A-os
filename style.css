@@ -1,0 +1,249 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: url("fotologo.png") no-repeat center center fixed;
+  background-size: cover;
+  text-align: center;
+  color: #c80d0d;
+}
+
+/* Pantallas centradas */
+.pantalla {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  text-align: center;
+}
+
+.frase {
+  font-size: 1.9em;
+  margin-bottom: 80px;
+  color: #bd164d;
+  text-shadow: 0 0 1px #da55b2;
+}
+
+/* Sobre */
+.icono-sobre {
+  position: relative;
+  width: 180px;
+  height: 120px;
+  cursor: pointer;
+  animation: latido 1.5s infinite;
+}
+
+.sobre-cuerpo {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #f8c8dc, #f1088c);
+  border: 3px solid #f47fbb;
+  border-radius: 8px;
+  box-shadow: 0 0 25px rgba(14, 13, 13, 0.8);
+}
+
+.sobre-tapa {
+  position: absolute;
+  top: -60px;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-left: 90px solid transparent;
+  border-right: 90px solid transparent;
+  border-bottom: 60px solid #ed68ca;
+  transform-origin: top center;
+}
+
+@keyframes abrirSobre {
+  from {
+    transform: rotateX(0deg);
+  }
+  to {
+    transform: rotateX(-120deg);
+  }
+}
+
+.sobre-tapa.abierta {
+  animation: abrirSobre 1s forwards;
+}
+
+@keyframes latido {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.oculto {
+  display: none;
+}
+
+h1,
+h2 {
+  font-family: Arial, sans-serif;
+  color: #d87093;
+  text-shadow: 0 0 15px #f2eaea;
+  margin: 10px 0;
+}
+
+p {
+  font-family: "Great Vibes", cursive;
+  margin: 10px 0;
+}
+
+/* Invitación */
+#invitacion {
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* Slides */
+.slide {
+  display: none;
+  width: 100%;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  animation: fade 2s ease;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.slide.active {
+  display: flex;
+}
+
+.fondo {
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* Marco principal */
+.marco {
+  width: 90%;
+  max-width: 500px;
+
+  padding: 25px;
+  box-sizing: border-box;
+
+  border: 3px solid #f79fce;
+  border-radius: 20px;
+
+  background: rgba(255, 255, 255, 0.88);
+
+  box-shadow: 0 0 20px rgba(245, 182, 193, 0.8);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-word;
+}
+
+/* Mantener texto dentro del marco */
+.marco h1,
+.marco h2,
+.marco p,
+.marco a,
+.marco button {
+  width: 100%;
+  max-width: 420px;
+}
+
+.marco p {
+  line-height: 1.7;
+}
+
+.marco a {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 18px;
+  background: #d87093;
+  color: white;
+  text-decoration: none;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.marco a:hover {
+  transform: scale(1.05);
+  background: #c75b83;
+}
+
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.foto {
+  width: 260px;
+  max-width: 100%;
+  border-radius: 20px;
+  margin-top: 20px;
+  box-shadow: 0 0 25px rgb(255, 134, 205);
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+button {
+  background: #e6b7b7;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 10px;
+  color: white;
+  font-size: 1em;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: scale(1.08);
+  background: #d87093;
+}
+
+/* Celulares */
+@media (max-width: 768px) {
+  .marco {
+    width: 95%;
+    padding: 20px;
+  }
+
+  .foto {
+    width: 220px;
+  }
+
+  h1 {
+    font-size: 1.7rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+
+  p {
+    font-size: 1.1rem;
+  }
+}
