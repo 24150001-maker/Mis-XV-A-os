@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Invitación XV Montserrat</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Música -->
+  <audio id="musica" loop>
+    <source src="musica.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- Pantalla inicial -->
+  <div id="sobre" class="pantalla">
+    <p class="frase">Invitación especial, toca el sobre para abrirlo ✨</p>
+
+    <div class="icono-sobre">
+      <div class="sobre-cuerpo"></div>
+      <div class="sobre-tapa"></div>
+    </div>
+  </div>
+
+  <!-- Invitación -->
+  <div id="invitacion" class="pantalla oculto">
+
+    <div class="slide active fondo" id="slide1">
+      <div class="marco">
+        <h1>Mis XV Años Montserrat</h1>
+        <img src="monsefoto.png" alt="Montserrat" class="foto">
+      </div>
+    </div>
+
+    <div class="slide fondo" id="slide2">
+      <div class="marco">
+        <h2>Cuenta regresiva</h2>
+        <p id="contador">Cargando...</p>
+      </div>
+    </div>
+
+    <div class="slide fondo" id="slide3">
+      <div class="marco">
+        <h2>Ceremonia</h2>
+        <p>📍 Parroquia de San Miguel Arcangel</p>
+        <p>📅 Domingo, 05 de Julio, 2026</p>
+        <p>⏰ 02:00 PM</p>
+
+        <a href="https://www.google.com/maps/place/Parroquia+de+San+Miguel+Arcangel/@18.5539855,-99.6032,18.55z/data=!4m6!3m5!1s0x85cc4b305504dfa9:0xb3a027fc77e41403!8m2!3d18.5533333!4d-99.6033333!16s%2Fg%2F1tgpbm3d"
+          target="_blank">
+          Ver ubicación
+        </a>
+      </div>
+    </div>
+
+    <div class="slide fondo" id="slide4">
+      <div class="marco">
+        <h2>Recepción</h2>
+        <p>📍 Salón Krystal</p>
+        <p>📅 Domingo, 05 de Julio, 2026</p>
+        <p>⏰ 06:00 PM</p>
+
+        <a href="https://www.google.com/maps/place/Salon+Krystal+Taxco/@18.5578709,-99.6009469,18z/data=!4m6!3m5!1s0x85cc4b2dfa7ea091:0x4e07253c47ff40e8!8m2!3d18.5571905!4d-99.6002457!16s%2Fg%2F11hd1qqwq1"
+          target="_blank">
+          Ver ubicación
+        </a>
+      </div>
+    </div>
+
+    <div class="slide fondo" id="slide5">
+      <div class="marco">
+        <h2>Opciones de regalo</h2>
+
+        <p>Tu presencia es mi mejor regalo 💖</p>
+
+        <p>
+          Lo que más nos emociona es que estés conmigo en este día tan especial.
+          Si además deseas compartir un detalle, puedes hacerlo en la mesa de regalos
+          o con la lluvia de sobres ✨💖
+        </p>
+      </div>
+    </div>
+
+    <div class="slide fondo" id="slide6">
+      <div class="marco">
+        <h2>Comparte tus fotos</h2>
+
+        <p>Ayúdame a crear recuerdos inolvidables 📸</p>
+
+        <p>
+          Comparte en Instagram con mi usuario:
+          <strong>@_monzglz</strong>
+        </p>
+      </div>
+    </div>
+
+    <div class="slide fondo" id="slide7">
+      <div class="marco">
+        <h2>Confirma tu asistencia</h2>
+
+        <button id="confirmar">
+          Confirmar aquí
+        </button>
+      </div>
+    </div>
+
+    <div class="slide fondo" id="slide8">
+      <div class="marco">
+
+        <p>
+          El reloj marca la hora…
+          la magia comienza hoy ✨
+        </p>
+
+        <p>
+          Dejo atrás los cuentos,
+          para vivir mi propia historia…
+          ¡Te esperamos!
+        </p>
+
+      </div>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
