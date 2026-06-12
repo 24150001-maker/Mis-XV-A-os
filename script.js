@@ -56,7 +56,7 @@ document.getElementById("confirmar").addEventListener("click", function () {
 
 Nombre: ${nombre}
 
-Confirmo mi asistencia a los XV años de Montserrat 💖`;
+Confirmo mi asistencia a tus XV años Monse 💖`;
 
   const url =
     `https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`;
