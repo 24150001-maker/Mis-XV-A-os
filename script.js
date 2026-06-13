@@ -122,3 +122,26 @@ function iniciarCuentaRegresiva() {
 }
 
 iniciarCuentaRegresiva();
+
+// Botón Música
+document.addEventListener("click", function(e){
+
+  if(e.target && e.target.id === "btnMusica"){
+
+    const musica = document.getElementById("musica");
+
+    if(musica.paused){
+
+      musica.play();
+      e.target.innerHTML = "⏸️ Pausar Música";
+
+    }else{
+
+      musica.pause();
+      e.target.innerHTML = "🎵 Escuchar Música";
+
+    }
+
+  }
+
+});
