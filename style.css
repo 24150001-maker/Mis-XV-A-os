@@ -7,7 +7,6 @@ body {
   color: #c80d0d;
 }
 
-/* Pantallas */
 .pantalla {
   display: flex;
   flex-direction: column;
@@ -25,7 +24,6 @@ body {
   padding: 20px;
 }
 
-/* SOBRE */
 .icono-sobre {
   position: relative;
   width: 220px;
@@ -56,12 +54,8 @@ body {
 }
 
 @keyframes abrirSobre {
-  from {
-    transform: rotateX(0deg);
-  }
-  to {
-    transform: rotateX(-120deg);
-  }
+  from { transform: rotateX(0deg); }
+  to { transform: rotateX(-120deg); }
 }
 
 .sobre-tapa.abierta {
@@ -78,26 +72,24 @@ body {
   display: none;
 }
 
-/* TITULOS */
 h1 {
-  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-family: "Great Vibes", cursive;
+  font-size: clamp(3rem, 6vw, 4.5rem);
   color: #d87093;
-  text-shadow: 0 0 15px #ffffff;
-  margin: 15px 0;
+  text-shadow: 0 0 15px #fff;
 }
 
 h2 {
-  font-size: clamp(2rem, 5vw, 3rem);
+  font-family: "Great Vibes", cursive;
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
   color: #d87093;
-  text-shadow: 0 0 15px #ffffff;
-  margin: 15px 0;
+  text-shadow: 0 0 15px #fff;
 }
 
 p {
   font-family: "Great Vibes", cursive;
-  font-size: clamp(1.7rem, 4vw, 2.5rem);
-  line-height: 1.6;
-  margin: 15px 0;
+  font-size: clamp(1.5rem, 3.5vw, 2.2rem);
+  line-height: 1.5;
   color: #b54d72;
 }
 
@@ -121,117 +113,94 @@ p {
   display: flex;
 }
 
-.fondo {
-  width: 100%;
-  min-height: 100vh;
-}
-
-/* MARCO GRANDE */
 .marco {
   width: 95%;
   max-width: 800px;
   min-height: 75vh;
-
   padding: 40px;
-
-  border: 4px solid #f79fce;
-  border-radius: 25px;
-
-  background: rgba(255,255,255,0.92);
-
+  border: 6px solid #f3b4d0;
+  border-radius: 30px;
+  background: rgba(255,255,255,.94);
   box-shadow: 0 0 30px rgba(245,182,193,.8);
-
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
-  text-align: center;
+  position: relative;
 }
 
-.marco p,
-.marco h1,
-.marco h2,
-.marco a,
-.marco button {
-  width: 100%;
+.marco::before {
+  content: "❀ ❁ ❀";
+  position: absolute;
+  top: 10px;
+  color: #e38ab5;
+  font-size: 2rem;
+}
+
+.marco::after {
+  content: "❀ ❁ ❀";
+  position: absolute;
+  bottom: 10px;
+  color: #e38ab5;
+  font-size: 2rem;
 }
 
 .foto {
   width: 380px;
   max-width: 90%;
   border-radius: 25px;
-  margin-top: 20px;
-  box-shadow: 0 0 25px rgb(255, 134, 205);
+  box-shadow: 0 0 25px rgb(255,134,205);
 }
 
-.marco a {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 15px 25px;
-  background: #d87093;
+.marco a,
+button {
+  background: linear-gradient(135deg,#ff7eb3,#d87093);
+  border: none;
+  padding: 16px 30px;
+  border-radius: 50px;
   color: white;
   text-decoration: none;
-  border-radius: 12px;
   font-size: 1.2rem;
-  transition: 0.3s;
-}
-
-.marco a:hover {
-  transform: scale(1.05);
-}
-
-button {
-  background: #d87093;
-  border: none;
-  padding: 18px 35px;
-  border-radius: 12px;
-  color: white;
-  font-size: 1.3rem;
   cursor: pointer;
   transition: .3s;
+  margin-top: 15px;
 }
 
-button:hover {
+button:hover,
+.marco a:hover {
   transform: scale(1.08);
 }
 
-@keyframes fade {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+strong {
+  color: #c45a84;
 }
 
-/* CELULARES */
-@media (max-width: 768px) {
+@keyframes fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
 
-  .marco {
-    width: 92%;
-    min-height: 78vh;
-    padding: 30px;
+@media (max-width:768px){
+
+  .marco{
+    width:92%;
+    padding:25px;
   }
 
-  .foto {
-    width: 300px;
+  .foto{
+    width:280px;
   }
 
-  h1 {
-    font-size: 2.2rem;
+  p{
+    font-size:1.15rem;
   }
 
-  h2 {
-    font-size: 1.9rem;
+  h1{
+    font-size:2.4rem;
   }
 
-  p {
-    font-size: 1.3rem;
+  h2{
+    font-size:2rem;
   }
 
-  button,
-  a {
-    font-size: 1.15rem;
-  }
 }
